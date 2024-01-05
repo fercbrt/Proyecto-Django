@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'debtsApp/style.css' %}">
+  </head>
+  <body>
+    <div class="editContainer">
+      <a class="linkButton" href="{% url 'debtsApp:index' %}">Home</a>
+    </div>
+    <h1>Welcome to debtsApp</h1>
+    <p>On this page you can see the largest debtors that have been registered.</p>
+    <div class="simpleContainer">
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-l93j">Name</th>
+            <th class="tg-l93j">Surname</th>
+            <th class="tg-l93j">Sex</th>
+            <th class="tg-l93j">Total debt</th>
+            <th class="tg-l93j">Address</th>
+            <th class="tg-l93j Actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for debtor in debtors %}
+          <tr>
+            <td class="tg-qv16"><a href="{%url 'debtsApp:debtor_detail' debtor.id %}">{{debtor.name}}</a></td>
+            <td class="tg-qv16">{{debtor.surname}}</td>
+            <td class="tg-qv16">{{debtor.sex}}</td>
+            <td class="tg-qv16">{{debtor.total_debt}} €</td>
+            <td class="tg-qv16">{{debtor.address}}</td>
+            <td class="tg-qv16 Actions"><a class="linkButton" href="{% url 'debtsApp:debtor_edit' debtor.id %}">Edit</a><a class="linkButton" href="{% url 'debtsApp:debtor_delete' debtor.id %}">Delete</a></td>
+          </tr>
+        {% endfor %} 
+        </tbody>
+      </table>
+      <div class="editContainer">
+        <a class="linkButton" href="{% url 'debtsApp:debtor_create' %}">Add</a>
+      </div>
+    </div>
+  </body>
+</html>

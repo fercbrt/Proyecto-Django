@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'debtsApp/style.css' %}">
+  </head>
+  <body>
+    <div class="editContainer">
+      <a class="linkButton" href="{% url 'debtsApp:index' %}">Home</a>
+    </div>
+    <div class="simpleContainer">
+      <h2>Add debtor</h2>
+      <form class="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button class="linkButton" type="submit">Save</button>
+      </form>
+  </div>
+  </body>
+</html>

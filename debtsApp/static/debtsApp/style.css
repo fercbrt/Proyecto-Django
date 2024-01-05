@@ -1,0 +1,64 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif
+}
+
+body {
+    padding-top:67px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+h2{
+    text-align:center;
+    color:darkblue;
+    font-size:auto;
+    font-weight:400px
+}
+
+p{
+    margin: 2em;
+}
+
+a {
+    text-decoration:none
+}
+.simpleContainer {
+    width:80%;
+    margin:auto;
+    margin-top:60px;
+    margin-bottom:40px;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    background-color:#fff
+}
+
+.tg  { width:100%;border-collapse:collapse;border-color:#aabcfe;border-spacing:0;}
+.tg td{background-color:#e8edff;border-color:#aabcfe;border-style:solid;border-width:1px;color:#669;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#b9c9fe;border-color:#aabcfe;border-style:solid;border-width:1px;color:#039;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-qv16{font-size:16px;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-l93j{border-color:inherit;font-size:16px;font-weight:bold;text-align:center;vertical-align:top}
+.Actions{
+    width:240px;text-align:center;vertical-align:center
+}
+.linkButton {
+    height:30px;
+    border-radius:8px;
+    padding:8px 12px;
+    margin: 4px;
+    background-color:darkblue;
+    color:#fff;
+    font-size:16px;
+    font-weight:700px;
+    cursor:pointer
+}
+
+.editContainer {
+    margin-top:12px;
+    margin-bottom: 12px;
+}

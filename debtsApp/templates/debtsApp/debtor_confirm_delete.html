@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    {% load static %}
+        <link rel="stylesheet" href="{% static 'debtsApp/style.css' %}">
+  </head>
+  <body>
+    <div class="editContainer">
+      <a class="linkButton" href="{% url 'debtsApp:index' %}">Home</a>
+    </div>
+    <div class="simpleContainer">
+      <h2>Delete debtor</h2>
+      <form method="post">{% csrf_token %}
+          <p>Are you sure you want to delete "{{ object }}"?</p>
+          {{ form }}
+          <button class="linkButton" type="submit">Confirm</button>
+      </form>
+    </div>
+  </body>
+</html>
